@@ -1286,6 +1286,11 @@ body {
        &>div {
            flex-basis: 32%;
        }
+    &__item {
+        @media(max-width: 1300px){
+            margin-left: 44px;
+        }
+    }
     &__logo {
         display: block;
         width: 137px;
