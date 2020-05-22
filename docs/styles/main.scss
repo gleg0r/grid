@@ -683,6 +683,9 @@ body {
         margin-bottom: 37px;
         margin-left: 33px;
         line-height: 1.1;
+        @media(max-width:385px){
+            margin-left: -3px;
+        }
         span {
             display: block;
             color: #65e496;
@@ -693,8 +696,9 @@ body {
             margin-left: -334px;
             letter-spacing: 1px;
             @media(max-width:385px){
-                margin-top: 114px;
-                }
+                margin-top: 73px;
+                font-size: 14px;
+            }
             @media(max-width:320px){
             margin-left: -250px;
             margin-top: 114px;
@@ -765,6 +769,7 @@ body {
                 }
                 @media(max-width:385px){
                     margin-top: 55px;
+                    margin-left: -280px;
                 }
                 @media(max-width:320px){
                     margin-left: -341px;
@@ -928,7 +933,8 @@ body {
                 margin-left: -317px;
             }
             @media(max-width:385px){
-                margin-top: 68px;
+                margin-top: 56px;
+                margin-left: -383px;
             }
             @media(max-width:320px){
                 margin-left: -418px;

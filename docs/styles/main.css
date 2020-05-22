@@ -1110,6 +1110,11 @@ body {
   margin-left: 33px;
   line-height: 1.1;
 }
+@media (max-width: 385px) {
+  .block-books__title {
+    margin-left: -3px;
+  }
+}
 .block-books__title span {
   display: block;
   color: #65e496;
@@ -1122,7 +1127,8 @@ body {
 }
 @media (max-width: 385px) {
   .block-books__title span {
-    margin-top: 114px;
+    margin-top: 73px;
+    font-size: 14px;
   }
 }
 @media (max-width: 320px) {
