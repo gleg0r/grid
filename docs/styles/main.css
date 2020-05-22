@@ -35,7 +35,7 @@ main {
 h1 {
   font-size: 2em;
   margin: 0.67em 0;
-}s
+}
 
 /* Grouping content
    ========================================================================== */
@@ -1221,6 +1221,7 @@ body {
 @media (max-width: 385px) {
   .block-books-desc-link a {
     margin-top: 55px;
+    margin-left: -280px;
   }
 }
 @media (max-width: 320px) {
@@ -1425,7 +1426,8 @@ body {
 }
 @media (max-width: 385px) {
   .block-books-desc-third {
-    margin-top: 68px;
+    margin-top: 56px;
+    margin-left: -383px;
   }
 }
 @media (max-width: 320px) {
@@ -1786,24 +1788,8 @@ body {
   display: flex;
   background-color: #44444f;
   color: #9191b5;
-  width: 131%;
   height: 513px;
   margin-left: -183px;
-}
-@media (max-width: 1300px) {
-  .footer {
-    width: 121%;
-  }
-}
-@media (max-width: 1020px) {
-  .footer {
-    width: 121%;
-  }
-}
-@media (max-width: 600px) {
-  .footer {
-    width: 100%;
-  }
 }
 
 .block-footer {
@@ -1814,6 +1800,11 @@ body {
 }
 .block-footer > div {
   flex-basis: 32%;
+}
+@media (max-width: 1300px) {
+  .block-footer__item {
+    margin-left: 44px;
+  }
 }
 .block-footer__logo {
   display: block;
