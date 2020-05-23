@@ -151,6 +151,7 @@ body {
 }
 .block-text {
     flex-basis: calc(93% - 500px);
+   
     @media(max-width: 1020px) {
         flex-basis: calc(93% - 312px);
     } 
