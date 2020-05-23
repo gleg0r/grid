@@ -571,14 +571,17 @@ body {
             margin: 0;
             padding: 0;
             counter-reset: list;
-            column-count: 2;
+            -moz-column-count: 2;
+                 column-count: 2;
             margin-top: 21px;
             font-family: 'Open Sans', serif;
             color: $text-color;
             margin-right: 1px;
-            column-gap: 32px;
+            -moz-column-gap: 32px;
+                 column-gap: 32px;
             @media(max-width:640px){
-                column-count: 1;
+                -moz-column-count: 1;
+                     column-count: 1;
             }
             &>li {
                 position: relative;
@@ -607,14 +610,17 @@ body {
                 margin: 0;
                 padding: 0;
                 counter-reset: list 10;
-                column-count: 2;
+                -moz-column-count: 2;
+                     column-count: 2;
                 margin-top: 21px;
                 font-family: 'Open Sans', serif;
                 color: $text-color;
                 margin-right: 1px;
-                column-gap: 32px;
+                -moz-column-gap: 32px;
+                     column-gap: 32px;
                 @media(max-width:640px){
-                    column-count: 1;
+                    -moz-column-count: 1;
+                         column-count: 1;
                 }
                 &>li {
                     position: relative;
@@ -1174,7 +1180,8 @@ body {
             left: 50%;
             top: 50%;
             transform: translate(-50%, -50%);
-            object-fit: cover;
+            -o-object-fit: cover;
+               object-fit: cover;
         }
     }
     &__desc {
@@ -1246,6 +1253,18 @@ body {
             margin-left: 31px;
             &:focus {
                 outline: none;
+            }
+            &::-webkit-input-placeholder {
+                color:#767692;
+            }
+            &::-moz-placeholder {
+                color:#767692;
+            }
+            &:-ms-input-placeholder {
+                color:#767692;
+            }
+            &::-ms-input-placeholder {
+                color:#767692;
             }
             &::placeholder {
                 color:#767692;
@@ -1451,7 +1470,8 @@ body {
             left: 50%;
             top: 50%;
             transform: translate(-50%, -50%);
-            object-fit: cover;
+            -o-object-fit: cover;
+               object-fit: cover;
         }
     }
 
