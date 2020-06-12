@@ -34,17 +34,16 @@
 			<header>
 				<div class="header">
 					<a href="" class="header__logo"></a>
-					<nav>      
+					<nav id="menu">      
 						<ul class="header-list">
 							<li class="header-list__item active"><a href="" class="header-list__link">Home</a></li>
 							<li class="header-list__item"><a href="#about" class="header-list__link">About</a></li>
-							<li class="header-list__item"><a href="#about" class="header-list__link">Contents</a></li>
-							<li class="header-list__item"><a href="#about" class="header-list__link">Books</a></li>
-							<li class="header-list__item"><a href="#about" class="header-list__link">Education</a></li>
-							<li class="header-list__item"><a href="#about" class="header-list__link">Skills</a></li>
-							<li class="header-list__item"><a href="#about" class="header-list__link">Portofolio</a></li>
-							<li class="header-list__item"><a href="#about" class="header-list__link">Clients</a></li>
-							<li class="header-list__item"><a href="#about" class="header-list__link">Contact</a></li>
+							<li class="header-list__item"><a href="#content" class="header-list__link">Contents</a></li>
+							<li class="header-list__item"><a href="#books" class="header-list__link">Books</a></li>
+							<li class="header-list__item"><a href="#feedback" class="header-list__link">Clients</a></li>
+							<li class="header-list__item"><a href="#education" class="header-list__link">Education</a></li>
+							<li class="header-list__item"><a href="#blog" class="header-list__link">Portofolio</a></li>
+							<li class="header-list__item"><a href="#contact" class="header-list__link">Contact</a></li>
 						</ul>
 					</nav>
 				</div>
@@ -104,7 +103,7 @@
 		</div>
 		<div class="page_gray">
 			<div class="wrap">
-				<div class="book-contents">
+				<div class="book-contents" id="content">
 					<h2 class="page__title">Book Contents</h2> 
 					<p class="page__subtitle"> Let's see what we have covered in the book</p>
 					<div class="block-about">
@@ -152,7 +151,7 @@
 				</div>
 			</div>
 		</div>	
-		<div class="block-books">
+		<div class="block-books" id="books">
 			<h2 class="block-books__title">	
 				Other Books
 				<span>Some books you might be interested in</span>
@@ -198,7 +197,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="page page-slider">
+		<div class="page page-slider" id="feedback">
 			<div class="wrap">
 				<div class="block-slider">
 					<div>
@@ -238,7 +237,7 @@
 		</div>
 		<div class="page">
 			<div class="wrap">	
-				<div class="block-author">
+				<div class="block-author second" id="education">
 					<div class="block-ava">
 						<svg class="block-ava__svg--left" width="435" height="704">
 							<linearGradient id="gradient1" x1="0" y1="0" x2="435" y2="704"gradientUnits="userSpaceOnUse">
@@ -271,7 +270,7 @@
 				</div>			
 			</div>
 		</div>
-		<div class="page_gray2">
+		<div class="page_gray2" id="blog">
 			<div class="wrap">
 				<h2 class="page__title">Latest from Blog</h2> 
 				<p class="page__subtitle">Some of the latest posts from my personal blog</p>
@@ -306,7 +305,7 @@
 		</div>
 		<div class="page">
 			<div class="wrap">
-				<div class="block-letter">
+				<div class="block-letter" id="contact">
 					<div class="block-letter-item">
 						<h2 class="block-letter__title">Join Newsletter</h2> 
 						<p class="block-letter__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspen disse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. </p>
@@ -359,7 +358,7 @@
 			</div>
 		</div>
 		<script src="js/main.js"></script>
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 		<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 		<script>
 			$(document).ready(function(){
@@ -371,6 +370,20 @@
 			$("#nextContents").click(function(){
 				$("#nextContentsList").fadeIn();
 				$("#nextContents").hide();
+			});
+			$(function(){
+				$('a[href*=#]').click(function() {
+				if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'')
+					&& location.hostname == this.hostname) {
+						var $target = $(this.hash);
+						$target = $target.length && $target || $('[name=' + this.hash.slice(1) +']');
+						if ($target.length) {
+							var targetOffset = $target.offset().top;
+							$('html,body').animate({scrollTop: targetOffset}, 500);//скорость прокрутки
+							return false;
+						}
+					}
+				});
 			});
 		</script>
 	</body>
